@@ -17,5 +17,5 @@ Custom template set webpack, babel, eslint and so on.
          `npm install --save-dev style-loader css-loader sass-loader sass`
       4. postcss
          `npm install --save-dev postcss-loader autoprefixer`
-
-babel
+      5. babel
+         `npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react`

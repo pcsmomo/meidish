@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: "bundle[contenthash].js",
     path: path.resolve(__dirname, "./build"),
   },
   mode: "development",
@@ -25,6 +25,14 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
     ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
 };
