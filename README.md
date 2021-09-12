@@ -27,3 +27,5 @@ Custom template set webpack, babel, eslint and so on.
             `npm install --save-dev clean-webpack-plugin`
          4. HTMLWebpackPlugin
             `npm install --save-dev html-webpack-plugin`
+      4. Dev server
+         `npm install webpack-dev-server --save-dev`

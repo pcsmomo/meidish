@@ -4,6 +4,7 @@
   "description": "custom-react-template",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack serve",
     "build": "webpack"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "webpack": "^5.52.0",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
   }
 }

@@ -5,13 +5,20 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = function (webpackEnv) {
+  const isDevMode = webpackEnv.WEBPACK_SERVE ? true : false;
+
   return {
     entry: "./src/index.js",
     output: {
       filename: "bundle[contenthash].js",
       path: path.resolve(__dirname, "./build"),
     },
-    mode: "development",
+    mode: isDevMode ? "development" : "production",
+    devServer: {
+      compress: false,
+      hot: true,
+      port: 9000,
+    },
     module: {
       rules: [
         {
@@ -24,11 +31,19 @@ module.exports = function (webpackEnv) {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader", "postcss-loader"],
+          use: [
+            isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            "css-loader",
+            "postcss-loader",
+          ],
         },
         {
           test: /\.scss$/,
-          use: ["style-loader", "css-loader", "sass-loader"],
+          use: [
+            isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader",
+          ],
         },
         {
           test: /\.(js|jsx)$/,
