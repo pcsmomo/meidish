@@ -1,8 +1,8 @@
-# custom-react-template
+# Mei's Awesome Dishes
 
-Custom template set webpack, babel, eslint and so on.
+Hundreds of Mei's amazing dishes
 
-## Steps
+## Development Steps
 
 1. Set up the front end part and build with webpack
    1. install react
@@ -32,3 +32,18 @@ Custom template set webpack, babel, eslint and so on.
    3. eslint config
       1. Install
          `npm install --save-dev eslint eslint-plugin-react eslint-plugin-react-hooks`
+2. Deploy to github page
+   1. install gh-page
+      `npm install --save-dev gh-pages`
+   2. Configure package.json
+      ```json
+      {
+        "homepage": "https://pcsmomo.github.io/meidish/",
+        "scripts": {
+          "predeploy": "npm run build",
+          "deploy": "gh-pages -d build"
+        }
+      }
+      ```
+   3. Deploy
+      `npm run deploy`

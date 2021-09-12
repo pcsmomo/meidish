@@ -1,22 +1,24 @@
 {
-  "name": "custom-react-template",
+  "name": "meidish",
   "version": "0.1.0",
-  "description": "custom-react-template",
+  "description": "mei's dishes",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pcsmomo/custom-react-template.git"
+    "url": "git+https://github.com/pcsmomo/meidish.git"
   },
   "author": "noah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pcsmomo/custom-react-template/issues"
+    "url": "https://github.com/pcsmomo/meidish/issues"
   },
-  "homepage": "https://github.com/pcsmomo/custom-react-template#readme",
+  "homepage": "https://pcsmomo.github.io/meidish/",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -33,6 +35,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.3.0",
     "postcss-loader": "^6.1.1",
