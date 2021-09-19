@@ -47,3 +47,8 @@ Hundreds of Mei's amazing dishes
       ```
    3. Deploy
       `npm run deploy`
+
+## Todo
+
+- Test if M.init() works or not
+- Catch warnings for vender files or set to ignore eslint.

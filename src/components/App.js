@@ -1,9 +1,14 @@
 import React from "react";
 
-import "./App.scss";
+import Search from "../components/Search/Search";
 
 const App = () => {
-  return <div>REACT APP</div>;
+  return (
+    <div className="container">
+      <Search />
+      REACT APP
+    </div>
+  );
 };
 
 export default App;
