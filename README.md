@@ -52,3 +52,5 @@ Hundreds of Mei's amazing dishes
 
 - Test if M.init() works or not
 - Catch warnings for vender files or set to ignore eslint.
+- testing setup
+- using local storage
