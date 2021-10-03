@@ -50,8 +50,8 @@ Hundreds of Mei's amazing dishes
 
 ## Todo
 
-- fix when build, it cannot find /images and /js
 - Test if M.init() works or not
 - Catch warnings for vender files or set to ignore eslint.
 - testing setup
-- using local storage
+- use autocomplete for search (tags)
+- using local storage to save searchKeyword
