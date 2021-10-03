@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* Text Inputs + Textarea
    ========================================================================== */
 
@@ -159,7 +161,7 @@ textarea.materialize-textarea {
   // Gutter spacing
   &.col {
     label {
-      left: $gutter-width / 2;
+      left: math.div($gutter-width, 2);
     }
 
     .prefix ~ label,
@@ -221,7 +223,7 @@ textarea.materialize-textarea {
     width: $input-height;
     font-size: $input-icon-size;
     transition: color 0.2s;
-    top: ($input-height - $input-icon-size) / 2;
+    top: math.div(($input-height - $input-icon-size), 2);
 
     &.active {
       color: $input-focus-color;

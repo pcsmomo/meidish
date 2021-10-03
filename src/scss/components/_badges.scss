@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Badges
 span.badge {
   min-width: 3rem;
@@ -39,13 +41,17 @@ nav ul a span.badge {
 
 // Line height centering
 .collection-item span.badge {
-  margin-top: calc(#{$collection-line-height / 2} - #{$badge-height / 2});
+  margin-top: calc(
+    #{math.div($collection-line-height, 2)} - #{math.div($badge-height, 2)}
+  );
 }
 .collapsible span.badge {
   margin-left: auto;
 }
 .sidenav span.badge {
-  margin-top: calc(#{$sidenav-line-height / 2} - #{$badge-height / 2});
+  margin-top: calc(
+    #{math.div($sidenav-line-height, 2)} - #{math.div($badge-height, 2)}
+  );
 }
 
 table span.badge {

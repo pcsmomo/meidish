@@ -31,6 +31,7 @@
 
 // 1. Colors
 // ==========================================================================
+@use "sass:math";
 
 $primary-color: color("teal", "darken-2") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
@@ -108,7 +109,7 @@ $card-link-color-light: lighten($card-link-color, 20%) !default;
 // ==========================================================================
 
 $carousel-height: 400px !default;
-$carousel-item-height: $carousel-height / 2 !default;
+$carousel-item-height: math.div($carousel-height, 2) !default;
 $carousel-item-width: $carousel-item-height !default;
 
 // 6. Collapsible
@@ -236,8 +237,8 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 
 $num-cols: 12 !default;
 $gutter-width: 1.5rem !default;
-$element-top-margin: $gutter-width/3 !default;
-$element-bottom-margin: ($gutter-width * 2)/3 !default;
+$element-top-margin: math.div($gutter-width, 3) !default;
+$element-bottom-margin: math.div(($gutter-width * 2), 3) !default;
 
 // 13. Navigation Bar
 // ==========================================================================
@@ -321,7 +322,7 @@ $footer-copyright-bg-color: rgba(51, 51, 51, 0.08) !default;
 
 $range: $large-screen - $small-screen !default;
 $intervals: 20 !default;
-$interval-size: $range / $intervals !default;
+$interval-size: math.div($range, $intervals) !default;
 
 // 23. Collections
 // ==========================================================================
