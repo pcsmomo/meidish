@@ -5,7 +5,10 @@ const Dish = () => {
     <div className="col s12 m4">
       <div className="card">
         <div className="card-image waves-effect waves-block waves-light">
-          <img className="activator" src="images/cream-pasta.jpg" />
+          <img
+            className="activator"
+            src="https://meidish-bucket.s3.ap-southeast-2.amazonaws.com/cream-pasta.jpg"
+          />
         </div>
         <div className="card-content">
           <span className="card-title activator grey-text text-darken-4">
