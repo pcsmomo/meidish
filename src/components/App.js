@@ -1,4 +1,5 @@
 import React from "react";
+import "../js/materialize";
 
 import Search from "../components/Search/Search";
 import DishList from "./DishList/DishList";
