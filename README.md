@@ -31,6 +31,8 @@ Hundreds of Mei's amazing dishes
             `npm install --save-dev clean-webpack-plugin`
          4. HTMLWebpackPlugin
             `npm install --save-dev html-webpack-plugin`
+         5. [CopyWebpackPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/) : to copy static files in public folder to build folder
+            `npm install --save-dev copy-webpack-plugin`
       4. Dev server
          `npm install webpack-dev-server --save-dev`
    3. eslint config

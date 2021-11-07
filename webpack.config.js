@@ -3,6 +3,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = function (webpackEnv) {
   const isDevMode = webpackEnv.WEBPACK_SERVE ? true : false;
@@ -88,6 +89,13 @@ module.exports = function (webpackEnv) {
           minifyCSS: true,
           minifyURLs: true,
         },
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: "public/favicon.ico",
+          },
+        ],
       }),
     ],
   };
