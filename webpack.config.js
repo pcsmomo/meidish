@@ -3,12 +3,13 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = function (webpackEnv) {
   const isDevMode = webpackEnv.WEBPACK_SERVE ? true : false;
 
   return {
-    entry: "./src/index.js",
+    entry: "./src/index.tsx",
     output: {
       filename: "bundle[contenthash].js",
       path: path.resolve(__dirname, "./build"),
@@ -50,10 +51,15 @@ module.exports = function (webpackEnv) {
           exclude: /node_modules/,
           use: ["babel-loader"],
         },
+        {
+          test: /\.(ts|tsx)$/,
+          use: "ts-loader",
+          exclude: /node_modules/,
+        },
       ],
     },
     resolve: {
-      extensions: [".js", ".jsx"],
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
     optimization: {
       minimize: true,
@@ -83,6 +89,13 @@ module.exports = function (webpackEnv) {
           minifyCSS: true,
           minifyURLs: true,
         },
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: "public/favicon.ico",
+          },
+        ],
       }),
     ],
   };
