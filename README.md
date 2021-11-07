@@ -20,7 +20,9 @@ Hundreds of Mei's amazing dishes
          5. babel
             `npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react`
          6. typescript
-            `npm install --save-dev typescript ts-loader`
+            - `npm install --save-dev typescript ts-loader`
+            - `tsc --init`
+            - `npm install --save-dev @types/react @types/react-dom`
       3. Plugin
          1. TerserPlugin : Minimizing
          2. MiniCssExtractPlugin : extracts CSS into separate files
