@@ -1,13 +1,13 @@
 import React from "react";
 import "../js/materialize";
 
-import Search from "../components/Search/Search";
+import Header from "../components/Header";
 import DishList from "./DishList/DishList";
 
 const App = () => {
   return (
     <div className="container">
-      <Search />
+      <Header />
       <DishList />
     </div>
   );
