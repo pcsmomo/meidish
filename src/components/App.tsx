@@ -1,15 +1,22 @@
-import React from "react";
 import "../js/materialize";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Search from "../components/Search/Search";
-import DishList from "./DishList/DishList";
+import Header from "../components/Header";
+import DishList from "./DishList";
+import Signin from "./Signin";
 
 const App = () => {
   return (
-    <div className="container">
-      <Search />
-      <DishList />
-    </div>
+    <Router>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<DishList />} />
+          <Route path="/signin" element={<Signin />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
