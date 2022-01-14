@@ -33,6 +33,7 @@ Hundreds of Mei's amazing dishes
             `npm install --save-dev html-webpack-plugin`
          5. [CopyWebpackPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/) : to copy static files in public folder to build folder
             `npm install --save-dev copy-webpack-plugin`
+         6. [DotenvPlugin](https://webpack.js.org/plugins/environment-plugin/#dotenvplugin) : to use `process.env` in the code
       4. Dev server
          `npm install webpack-dev-server --save-dev`
    3. eslint config

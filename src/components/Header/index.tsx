@@ -1,22 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Search = () => {
+const Header = () => {
+  const isDev = process.env.NODE_ENV === "development";
+  const pathname = window.location.pathname;
+  const prjPath = isDev ? "" : `/${pathname.split("/")[1]}`;
+
   return (
     <nav>
       <div className="nav-wrapper">
-        <Link to="/" className="left brand-logo">
+        <Link to={`${prjPath}/`} className="left brand-logo">
           <i className="material-icons">local_dining</i>
         </Link>
         {/* <ul className="right hide-on-med-and-down"> */}
         <ul className="right">
           <li>
-            <a href="/">
+            <a href={`${prjPath}/`}>
               <i className="material-icons">search</i>
             </a>
           </li>
           <li>
-            <Link to="/signin">Sign in</Link>
+            <Link to={`${prjPath}/signin`}>Sign in</Link>
           </li>
           {/* Display this when signed in */}
           {/* <li>
@@ -30,4 +34,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Header;
