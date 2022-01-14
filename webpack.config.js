@@ -19,6 +19,7 @@ module.exports = function (webpackEnv) {
       compress: false,
       hot: true,
       port: 9000,
+      historyApiFallback: true, // browser url routing
     },
     module: {
       rules: [
