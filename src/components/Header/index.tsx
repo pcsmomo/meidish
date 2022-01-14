@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   return (
     <nav>
       <div className="nav-wrapper">
-        <a href="#!" className="left brand-logo">
+        <Link to="/" className="left brand-logo">
           <i className="material-icons">local_dining</i>
-        </a>
+        </Link>
         {/* <ul className="right hide-on-med-and-down"> */}
         <ul className="right">
           <li>
@@ -15,7 +16,7 @@ const Search = () => {
             </a>
           </li>
           <li>
-            <a href="/">Sign in</a>
+            <Link to="/signin">Sign in</Link>
           </li>
           {/* Display this when signed in */}
           {/* <li>
