@@ -7,13 +7,20 @@ import DishList from "./DishList";
 import Signin from "./Signin";
 
 const App = () => {
+  const isDev = process.env.NODE_ENV === "development";
+
+  // when deploying to github pages,
+  // this project gets arranged as a sub folder from my main domain
+  const pathname = window.location.pathname;
+  const prjPath = isDev ? "" : `/${pathname.split("/")[1]}`;
+
   return (
     <Router>
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<DishList />} />
-          <Route path="/signin" element={<Signin />} />
+          <Route path={`${prjPath}/`} element={<DishList />} />
+          <Route path={`${prjPath}/signin`} element={<Signin />} />
         </Routes>
       </div>
     </Router>
