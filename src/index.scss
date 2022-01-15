@@ -1,1 +1,28 @@
 @import "./scss/materialize";
+
+// *************************************************************************
+// ** Later, now I have installed materialize-css package, and can use it **
+// ** But for learning purpose, let me keep using materlize from the local one **
+
+// Materialize CSS - how to keep color modifications separate from NPM module?
+// https://stackoverflow.com/questions/49762589/materialize-css-how-to-keep-color-modifications-separate-from-npm-module
+
+// Import materialize-css
+// @import "materialize-css/sass/materialize";
+
+// $primary-color: color("materialize-red", "lighten-2") !default;
+// $primary-color-light: false !default;
+// $primary-color-dark: false !default;
+// @if not $primary-color-light {
+//   $primary-color-light: lighten($primary-color, 15%);
+// }
+// @if not $primary-color-dark {
+//   $primary-color-dark: darken($primary-color, 15%);
+// }
+// $secondary-color: color("teal", "lighten-1") !default;
+// $success-color: color("green", "base") !default;
+// $error-color: color("red", "base") !default;
+
+// $link-color: color("light-blue", "darken-1") !default;
+// ** Later, now I have installed materialize-css package, and can use it **
+// *************************************************************************

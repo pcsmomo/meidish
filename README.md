@@ -39,6 +39,9 @@ Hundreds of Mei's amazing dishes
    3. eslint config
       1. Install
          `npm install --save-dev eslint eslint-plugin-react eslint-plugin-react-hooks`
+   4. install materialize-css
+      - `npm install --save materialize-css`
+      - `npm install --save-dev @types/materialize-css`
 2. Deploy to github page
    1. install gh-page
       `npm install --save-dev gh-pages`

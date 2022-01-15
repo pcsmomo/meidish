@@ -22,3 +22,21 @@ new Dotenv({
   safe: false, // load .env.example (defaults to "false" which does not use dotenv-safe)
 });
 ```
+
+## materialize css
+
+install materialize css package to use them in my typescript setup
+
+```sh
+npm install --save materialize-css
+npm install --save-dev @types/materialize-css
+```
+
+```js
+import M from "materialize-css";
+const Calculator = () => {
+  useEffect(() => {
+    M.updateTextFields();
+  }, []);
+};
+```
