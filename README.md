@@ -42,6 +42,9 @@ Hundreds of Mei's amazing dishes
    4. install materialize-css
       - `npm install --save materialize-css`
       - `npm install --save-dev @types/materialize-css`
+   5. install redux, redux-thunk
+      - `npm install --save axios react-redux redux redux-thunk`
+      - `npm install --save-dev @types/react-redux`
 2. Deploy to github page
    1. install gh-page
       `npm install --save-dev gh-pages`
