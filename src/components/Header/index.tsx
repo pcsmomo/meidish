@@ -20,6 +20,11 @@ const Header = () => {
             </a>
           </li>
           <li>
+            <Link to={`${prjPath}/ratio`}>
+              <i className="material-icons">blur_circular</i>
+            </Link>
+          </li>
+          <li>
             <Link to={`${prjPath}/signin`}>Sign in</Link>
           </li>
           {/* Display this when signed in */}
