@@ -20,9 +20,9 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href={`${prjPath}/ratio`}>
+            <Link to={`${prjPath}/ratio`}>
               <i className="material-icons">blur_circular</i>
-            </a>
+            </Link>
           </li>
           <li>
             <Link to={`${prjPath}/signin`}>Sign in</Link>
