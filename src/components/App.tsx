@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "../components/Header";
 import DishList from "./DishList";
+import RatioCalculator from "./RatioCalculator";
 import Signin from "./Signin";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path={`${prjPath}/`} element={<DishList />} />
+          <Route path={`${prjPath}/ratio`} element={<RatioCalculator />} />
           <Route path={`${prjPath}/signin`} element={<Signin />} />
         </Routes>
       </div>
