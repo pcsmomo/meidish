@@ -49,7 +49,7 @@ const RatioCalculator = () => {
 
         {/* input row */}
         <div className="row mb-0">
-          <div className="input-field col s6">
+          <div className="input-field col s6 mb-0 mt-0">
             <input
               type="number"
               onChange={(e) =>
@@ -57,7 +57,7 @@ const RatioCalculator = () => {
               }
             />
           </div>
-          <div className="input-field col s6">
+          <div className="input-field col s6 mb-0 mt-0">
             <input
               name="target-amount"
               type="number"
@@ -76,7 +76,7 @@ const RatioCalculator = () => {
 
           return (
             <div className="row mb-0" key={`recipe-input_${index}`}>
-              <div className="input-field col s6">
+              <div className="input-field col s6 mb-0 mt-0">
                 <input
                   value={input}
                   type="number"
@@ -85,7 +85,7 @@ const RatioCalculator = () => {
                   }
                 />
               </div>
-              <div className="calculated col s6">
+              <div className="calculated col s6 mb-0 mt-0">
                 {isNaN(valueToDisplay) ? "" : valueToDisplay}
               </div>
             </div>
