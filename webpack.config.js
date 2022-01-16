@@ -16,6 +16,7 @@ module.exports = function (webpackEnv) {
       path: path.resolve(__dirname, "./build"),
     },
     mode: isDevMode ? "development" : "production",
+    // devtool: "inline-source-map",
     devServer: {
       compress: false,
       hot: true,
