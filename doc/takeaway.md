@@ -46,6 +46,7 @@ const Calculator = () => {
 When gets this message on the browser console
 
 ```sh
+# browser message
 DevTools failed to load source map: Could not load content for webpack://meidish/node_modules/react-router-dom/index.js.map: HTTP error: status code 404, net::ERR_UNKNOWN_URL_SCHEME
 ```
 
@@ -58,3 +59,12 @@ I could have two options.
 2. turn off to display the warning message (means, I don't want the source-map)
    - Chrome Devtool - Settings - check 'selected context only'
    - [Stackoverflow - Error message "DevTools failed to load SourceMap: Could not load content for chrome-extension://..."](https://stackoverflow.com/questions/61339968/error-message-devtools-failed-to-load-sourcemap-could-not-load-content-for-chr)
+
+## react warning message - possible undefined value
+
+```sh
+# browser message
+react_devtools_backend.js:4045 / Warning: A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component.
+```
+
+-> type guard not to refer undefined value on the input value
